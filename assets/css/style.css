@@ -1,6 +1,8 @@
 /* ====================== COLOR VARIABLES =================== */
 :root {
   --main-color: #e5e5e5;
+  --second-color: #474747;
+  --border-color: #bebebe;
 }
 
 /* ===================== GLOBAL ROLES ======================*/
@@ -14,6 +16,7 @@
 
 body {
   background-color: #fff;
+  height: 200vh;
 }
 
 a {
@@ -28,8 +31,12 @@ a {
   padding: 0 1.5rem;
   width: 80%;
   border-radius: 2rem;
-  border: 1px solid #ccc;
+  border: 1px solid var(--border-color);
   box-shadow: 5px 5px 20px rgba(181, 181, 191, 0.2);
+}
+
+.search__bar svg {
+  cursor: pointer;
 }
 
 .search__bar form {
@@ -42,6 +49,10 @@ form input {
   padding: 1rem;
 }
 
+form input::placeholder {
+  color: #949494;
+}
+
 /* =========================== CATEGORIES ================== */
 .content__categories {
   width: 80%;
@@ -50,15 +61,22 @@ form input {
   overflow: hidden;
 }
 
+.links {
+  gap: 10px;
+}
+
 .nav_link {
-  border: 1px solid #ccc;
-  /* box-shadow: 5px 5px 5px rgba(181, 181, 191, 0.2); */
-  font-family: 'Almarai', sans-serif;
+  border: 1px solid var(--border-color);
+  font-family: "Almarai", sans-serif;
   font-weight: 400;
 }
 
+.nav_link:not(:last-child) {
+  box-shadow: 5px 5px 5px rgba(181, 181, 191, 0.2);
+}
+
 .nav_link a {
-  color: rgba(71, 71, 71, 1);
+  color: var(--second-color);
   display: block;
 }
 
@@ -70,12 +88,130 @@ form input {
   display: flex;
   align-items: center;
   background-color: #fff;
-
 }
 
-.more a{
+.more a {
   color: #000;
   text-decoration: underline;
 }
 
-/* ==================== NAV SCROLL ACTION ================== */
+/* ==================== NAV SCROLL ACTION ==================== */
+
+/* ========================= MAIN ============================ */
+.main h1 {
+  color: var(--second-color);
+}
+/* ========================= CARD ============================= */
+.container__card {
+  gap: 40px;
+}
+
+.cards .card__product {
+  border-radius: 2rem;
+  box-shadow: 4px 4px 10px rgba(181, 181, 191, 0.2), -4px -4px 10px rgba(181, 181, 191, 0.2);
+}
+
+.cards .card__product .image {
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.cards img {
+  width: 100%;
+}
+
+.card__info {
+  line-height: 1.2;
+  padding: 20px 20px 10px 0;
+}
+
+.card__title {
+  color: var(--second-color);
+  font-size: 20px;
+}
+
+.card__description {
+  margin-bottom: 10px;
+  display: block;
+  color: var(--second-color);
+}
+
+.switch__color {
+  margin-bottom: 10px;
+}
+
+.colors__sw {
+  border-radius: 30px;
+  background-color: #ccc;
+  width: 80px;
+  padding: 5px;
+}
+
+.colors__sw-three {
+  width: 120px;
+}
+
+.colors__sw button {
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+}
+
+.colors__white {
+  background-color: #fff;
+}
+
+.colors__blue {
+  background-color: #21446d;
+}
+
+.colors__black {
+  background-color: #000;
+}
+.colors__gray {
+  background-color: #c9c9c9;
+}
+
+.colors__gray-two {
+  background-color: #929292;
+}
+
+.colors__page {
+  background-color: #f1e2d4;
+}
+
+.colors-green {
+  background-color: #304a23;
+}
+
+.colors-red {
+  background-color: #AF0303;
+}
+
+.meny-product {
+  background-color: rgba(255, 147, 69, 0.8);
+  padding: 3px 10px;
+  border-radius: 15px;
+  color: #fff;
+}
+
+.offer {
+  color: #02660c80;
+  font-weight: bold;
+}
+
+.card__product {
+  background-color: #fff;
+}
+
+/* ======================== SIDEBAR ======================== */
+
+.main__content .sidebar {
+  padding: 10px;
+  box-shadow: 2px 2px 1px rgba(181, 181, 191, 0.2), -2px -2px 1px rgba(181, 181, 191, 0.2);
+  border-radius: 10px;
+  height: 600px;
+  width: 13%;
+  transform: translateY(-50px);
+}
