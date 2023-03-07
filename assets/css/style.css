@@ -1,0 +1,79 @@
+/* ====================== COLOR VARIABLES =================== */
+:root {
+  --main-color: #e5e5e5;
+}
+
+/* ===================== GLOBAL ROLES ======================*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+}
+
+body {
+  background-color: #fff;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ==================== SEARCH =================== */
+.search__bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+  width: 80%;
+  border-radius: 2rem;
+  border: 1px solid #ccc;
+  box-shadow: 5px 5px 20px rgba(181, 181, 191, 0.2);
+}
+
+.search__bar form {
+  width: 100%;
+}
+
+form input {
+  background-color: transparent;
+  width: 90%;
+  padding: 1rem;
+}
+
+/* =========================== CATEGORIES ================== */
+.content__categories {
+  width: 80%;
+  padding: 1rem;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.nav_link {
+  border: 1px solid #ccc;
+  /* box-shadow: 5px 5px 5px rgba(181, 181, 191, 0.2); */
+  font-family: 'Almarai', sans-serif;
+  font-weight: 400;
+}
+
+.nav_link a {
+  color: rgba(71, 71, 71, 1);
+  display: block;
+}
+
+.more {
+  position: relative;
+  left: 0;
+  z-index: 1;
+  transform: translateX(-30px);
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+
+}
+
+.more a{
+  color: #000;
+  text-decoration: underline;
+}
