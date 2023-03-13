@@ -16,13 +16,41 @@
 
 body {
   background-color: #fff;
-  height: 200vh;
+  height: fit-content;
 }
 
 a {
   text-decoration: none;
 }
+/* ==================== NAVBAR =================== */
+.nbar{
+  background-color: #000000;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+.navbar-toggler{
+  display: none;
+  width: 100%;
+  padding: 15px;
+  background-color: #fff;
+}
+.navbar-nav{
+  text-align: center;
+}
 
+/* ==================== NAVBAR MEDIA =================== */
+@media (max-width: 999px) {
+  .navbar-toggler{
+    position: sticky;
+    display:block;
+    top: 0;
+  }
+}
+.active{
+  background-color:#AF0303;
+}
 /* ==================== SEARCH =================== */
 .search__bar {
   display: flex;
@@ -52,7 +80,13 @@ form input {
 form input::placeholder {
   color: #949494;
 }
+/* ==================== SEARCH MEDIA =================== */
 
+@media (max-width: 999px) {
+  .search__bar{
+    width: 100%;
+  }
+}
 /* =========================== CATEGORIES ================== */
 .content__categories {
   width: 80%;
@@ -63,6 +97,7 @@ form input::placeholder {
 
 .links {
   gap: 10px;
+  flex-wrap:nowrap;
 }
 
 .nav_link {
@@ -94,7 +129,18 @@ form input::placeholder {
   color: #000;
   text-decoration: underline;
 }
-
+/* ==================== CATEGORIES Media ==================== */
+@media (max-width: 999px) {
+  .content__categories{
+    width: 100%;
+  }
+  .nav_link{
+    width: auto;
+  }
+  .sidebar{
+    display: none;
+  }
+}
 /* ==================== NAV SCROLL ACTION ==================== */
 
 /* ========================= MAIN ============================ */
